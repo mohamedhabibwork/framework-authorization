@@ -1,0 +1,44 @@
+{
+  "name": "@framework/authorization",
+  "version": "0.2.0",
+  "description": "Abilities, roles and permissions: a deny-by-default gate over your principals.",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/mohamedhabibwork/framework/tree/main/packages/authorization",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedhabibwork/framework-authorization.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohamedhabibwork/framework/issues"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@framework/auth": "github:mohamedhabibwork/framework-auth#standalone",
+    "@framework/core": "github:mohamedhabibwork/framework-core#standalone",
+    "@framework/database": "github:mohamedhabibwork/framework-database#standalone",
+    "@framework/http": "github:mohamedhabibwork/framework-http#standalone",
+    "drizzle-orm": "0.45.4",
+    "hono": "4.13.13",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@framework/testing": "github:mohamedhabibwork/framework-testing#standalone",
+    "@types/bun": "1.4.2",
+    "oxfmt": "0.75.0",
+    "oxlint": "1.90.0",
+    "typescript": "7.0.2"
+  }
+}
